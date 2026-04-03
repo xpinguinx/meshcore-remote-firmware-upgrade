@@ -69,6 +69,10 @@ Filtro board:
 meshcore-update --board [tipo di board/scheda] (LilyGo, Heltec, ecc.)
 ```
 
+<img width="619" height="980" alt="board select" src="https://github.com/user-attachments/assets/891981ba-81e3-489d-8e6b-56f34a28ed44" />
+<img width="619" height="980" alt="board select" src="https://github.com/user-attachments/assets/891981ba-81e3-489d-8e6b-56f34a28ed44" />
+
+
 ## Requisiti
 
 - Raspberry / Linux con accesso internet
