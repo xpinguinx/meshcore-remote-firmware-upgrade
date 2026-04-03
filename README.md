@@ -70,7 +70,11 @@ meshcore-update --board [tipo di board/scheda] (LilyGo, Heltec, ecc.)
 ```
 
 <img width="619" height="980" alt="board select" src="https://github.com/user-attachments/assets/891981ba-81e3-489d-8e6b-56f34a28ed44" />
-<img width="619" height="980" alt="board select" src="https://github.com/user-attachments/assets/891981ba-81e3-489d-8e6b-56f34a28ed44" />
+
+<br>
+
+<img width="1320" height="909" alt="version select" src="https://github.com/user-attachments/assets/ef68ad9f-3b7e-4dd4-be10-046bb15b00e3" />
+
 
 
 ## Requisiti
