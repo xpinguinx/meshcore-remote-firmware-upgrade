@@ -4,7 +4,7 @@ Strumento minimale per aggiornare in sicurezza un nodo MeshCore collegato via US
 
 ## Obiettivo
 
-Questo progetto è pensato solo per aggiornare firmware già installati su board ESP32 compatibili MeshCore, da terminale Linux.
+Questo progetto è pensato SOLO per aggiornare firmware già installati su board ESP32 compatibili MeshCore, da terminale Linux.
 
 Scelte conservative:
 - usa la porta seriale stabile sotto `/dev/serial/by-id/` quando disponibile
@@ -66,7 +66,7 @@ meshcore-update --port /dev/serial/by-id/usb-XXXXX
 Filtro board:
 
 ```bash
-meshcore-update --board LilyGo
+meshcore-update --board [tipo di board/scheda] (LilyGo, Heltec, ecc.)
 ```
 
 ## Requisiti
@@ -88,4 +88,5 @@ Se il catalogo MeshCore per una certa board/versione offre solo immagini `wipe` 
 - `meshcore_updater.py` tool principale
 - `requirements.txt` dipendenze Python
 - `.gitattributes` forza i file shell/python in LF
-# meshcore-remote-firmware-upgrade
+
+
