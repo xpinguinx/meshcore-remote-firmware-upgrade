@@ -1,0 +1,91 @@
+# MeshCore Remote Firmware Upgrade
+
+Strumento minimale per aggiornare in sicurezza un nodo MeshCore collegato via USB seriale a un Raspberry remoto.
+
+## Obiettivo
+
+Questo progetto è pensato solo per aggiornare firmware già installati su board ESP32 compatibili MeshCore, da terminale Linux.
+
+Scelte conservative:
+- usa la porta seriale stabile sotto `/dev/serial/by-id/` quando disponibile
+- verifica la comunicazione con `esptool` prima di toccare la board
+- scarica il firmware dal catalogo ufficiale di `https://flasher.meshcore.io`
+- sceglie solo firmware di tipo update
+- rifiuta file `flash-wipe` e `*-merged.bin`
+- scrive il firmware a `0x10000`
+- può creare un backup completo della flash prima dell'aggiornamento
+
+## Installazione locale
+
+Dalla cartella del progetto:
+
+```bash
+bash install.sh
+```
+
+## Installazione da GitHub con un solo comando
+
+Dopo aver pubblicato il repository:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/TUO-UTENTE/meshcore-remote-firmware-upgrade/main/install.sh | bash -s -- --repo TUO-UTENTE/meshcore-remote-firmware-upgrade
+```
+
+## Uso
+
+Avvio guidato:
+
+```bash
+meshcore-update
+```
+
+Solo rilevamento seriali:
+
+```bash
+meshcore-update --detect
+```
+
+Solo verifica board:
+
+```bash
+meshcore-update --verify
+```
+
+Autotest installazione:
+
+```bash
+meshcore-update --self-test
+```
+
+Con porta esplicita:
+
+```bash
+meshcore-update --port /dev/serial/by-id/usb-XXXXX
+```
+
+Filtro board:
+
+```bash
+meshcore-update --board LilyGo
+```
+
+## Requisiti
+
+- Raspberry / Linux con accesso internet
+- board ESP32 MeshCore collegata via USB dati
+- utente con privilegi `sudo`
+
+## Note di sicurezza
+
+Questo tool non esegue installazioni `wipe` e non fa erase totale della flash.
+Per una postazione remota è una scelta voluta, per ridurre il rischio operativo.
+
+Se il catalogo MeshCore per una certa board/versione offre solo immagini `wipe` o `merged`, il tool interrompe la procedura.
+
+## File inclusi
+
+- `install.sh` installer locale e GitHub bootstrap
+- `meshcore_updater.py` tool principale
+- `requirements.txt` dipendenze Python
+- `.gitattributes` forza i file shell/python in LF
+# meshcore-remote-firmware-upgrade
