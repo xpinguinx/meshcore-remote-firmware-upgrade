@@ -4,7 +4,7 @@ Strumento minimale per aggiornare in sicurezza un nodo MeshCore collegato via US
 
 ## Obiettivo
 
-Questo progetto è pensato SOLO PER AGGIORNARE FIRMWARE GIA' INSTALLATI su board ESP32 compatibili MeshCore, da terminale Linux (questo progetto è statao testato con successo su un semplice ed economico Raspberry PI0 2W con a bordo una SDmemory da 32Gb)
+Questo progetto è pensato SOLO PER AGGIORNARE FIRMWARE GIA' INSTALLATI su board ESP32 compatibili MeshCore, da terminale Linux (questo progetto è stato testato con successo in un semplice ed economico Raspberry PI0 2W, con a bordo una SDmemory da 32Gb)
 
 Scelte conservative:
 - usa la porta seriale stabile sotto `/dev/serial/by-id/` quando disponibile
