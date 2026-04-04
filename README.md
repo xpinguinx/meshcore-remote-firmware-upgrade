@@ -28,7 +28,7 @@ bash install.sh
 Dopo aver pubblicato il repository:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/xpinguinx/meshcore-remote-firmware-upgrade/main/install.sh | bash -s -- --repo TUO-UTENTE/meshcore-remote-firmware-upgrade
+curl -fsSL https://raw.githubusercontent.com/xpinguinx/meshcore-remote-firmware-upgrade/main/install.sh | bash -s -- --repo xpinguinx/meshcore-remote-firmware-upgrade
 ```
 
 ## Uso
